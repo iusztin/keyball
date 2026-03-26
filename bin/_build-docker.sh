@@ -25,6 +25,7 @@ echo "==> Setting up QMK home"
 qmk setup --home "${QMK_HOME}" --yes
 
 echo "==> Installing symlink for keyball keyboards"
+rm -rf "${QMK_HOME}/keyboards/keyball"
 ln -sf "$(pwd)/qmk_firmware/keyboards/keyball" "${QMK_HOME}/keyboards/keyball"
 
 echo "==> Installing Python dependencies"
