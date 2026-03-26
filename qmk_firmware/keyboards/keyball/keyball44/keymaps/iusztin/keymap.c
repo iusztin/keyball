@@ -71,3 +71,21 @@ const key_override_t **key_overrides = (const key_override_t *[]){
     &delete_key_override,
     NULL
 };
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    static uint8_t prev_cpi_value;
+
+    switch (keycode) {
+        case KC_LCTL:
+            if (record->event.pressed) {
+                prev_cpi_value = keyball_get_cpi();
+
+                // 2 = 200 CPI
+                keyball_set_cpi(2);
+            } else {
+                keyball_set_cpi(prev_cpi_value);
+            }
+    }
+
+    return true;
+}
