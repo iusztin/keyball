@@ -14,7 +14,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [1] = LAYOUT_universal(
-    _______, _______, _______, _______, _______, _______,            _______, SSNP_FRE, SSNP_VRT, SSNP_HOR, _______, _______,
+    _______, _______, _______, _______, _______, _______,            _______, _______, _______, _______, _______, _______,
     _______, _______, _______, _______, _______, _______,            KC_PGUP, KC_BTN1, KC_BTN2, KC_BTN3, _______, _______,
     _______, _______, _______, _______, _______, _______,            KC_PGDN, KC_BTN4, KC_BTN5, _______, _______, _______,
                   _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______
@@ -35,9 +35,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [4] = LAYOUT_universal(
-    _______, KC_F1,  KC_F2,  KC_F3,   KC_F4,   KC_F5,                 KC_F6,   KC_F7,    KC_F8,    KC_F9,   KC_F10,  _______,
-    _______, KC_F11, KC_F12, _______, _______, SCRL_DVI,              _______, KC_VOLD,  KC_VOLU,  _______, _______, _______,
-    _______, AML_TO, AML_I50, AML_D50, _______, SCRL_DVD,             CPI_D1K, CPI_D100, CPI_I100, CPI_I1K, _______, KBC_SAVE,
+    SSNP_FRE, KC_F1,  KC_F2,  KC_F3,   KC_F4,   KC_F5,                 KC_F6,   KC_F7,    KC_F8,    KC_F9,   KC_F10,  _______,
+    SSNP_VRT, KC_F11, KC_F12, _______, _______, SCRL_DVI,              _______, KC_VOLD,  KC_VOLU,  _______, _______, _______,
+    SSNP_HOR, AML_TO, AML_I50, AML_D50, _______, SCRL_DVD,             CPI_D1K, CPI_D100, CPI_I100, CPI_I1K, _______, KBC_SAVE,
                   _______, _______, _______, _______, _______,    KBC_RST, _______, _______, _______, _______
   ),
 };
