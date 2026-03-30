@@ -17,3 +17,7 @@
 
 #define POINTING_DEVICE_AUTO_MOUSE_ENABLE
 #define AUTO_MOUSE_DEFAULT_LAYER 1
+
+// Disabled SPLIT_USB_DETECT to avoid slave issue via usb hub
+#undef SPLIT_USB_DETECT
+#define MASTER_RIGHT
