@@ -30,7 +30,9 @@ const uint8_t CPI_MAX        = pmw3360_MAXCPI + 1;
 const uint8_t SCROLL_DIV_MAX = 7;
 
 const uint16_t AML_TIMEOUT_MIN = 100;
-const uint16_t AML_TIMEOUT_MAX = 1000;
+#ifndef AML_TIMEOUT_MAX
+#    define AML_TIMEOUT_MAX 1000
+#endif
 const uint16_t AML_TIMEOUT_QU  = 50;   // Quantization Unit
 
 static const char BL = '\xB0'; // Blank indicator character
@@ -87,7 +89,7 @@ static inline int8_t clip2int8(int16_t v) {
 }
 
 #ifdef OLED_ENABLE
-static const char *format_4d(int8_t d) {
+static const char *format_4d(int16_t d) {
     static char buf[5] = {0}; // max width (4) + NUL (1)
     char        lead   = ' ';
     if (d < 0) {

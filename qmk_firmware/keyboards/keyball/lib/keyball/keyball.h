@@ -126,7 +126,7 @@ typedef union {
         uint8_t sdiv : 3;  // scroll divider
 #ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
         uint8_t amle : 1;  // automatic mouse layer enabled
-        uint16_t amlto : 5; // automatic mouse layer timeout
+        uint16_t amlto : 8; // automatic mouse layer timeout
 #endif
 #if KEYBALL_SCROLLSNAP_ENABLE == 2
         uint8_t ssnap : 2; // scroll snap mode
